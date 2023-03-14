@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type = "text/css" href="style.css">
 
     <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -14,28 +14,24 @@
 <body>
 
     <!--Header design-->
-    <header class = "header three-col" >
-            <div>
-                <a href="#" class = "myLogo">Portfolio</a>
-            </div>
-            <div>
-                <nav class="naviBar">
-                    <a href="#home" class = "active" >Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contactMe">Contact me</a>
-
-                </nav>
-            </div>
-            <div class="bx bx-moon" id = "moon-icon">
-
-            </div>
-            
+    <header>
+            <a href="#" class = "myLogo">Portfolio</a>
+            <ul class="naviBar">
+                <li><a href="#home" class = "active" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contactMe">Contact me</a></li>
+            </ul>
+            <div class = "main">
+                <div class = "bx bx-moon" id = "moon-icon"></div>
+                <div class='bx bx-menu' id = "menu-icon"></div> 
+            </div>              
     </header>
+
     <!--Home section-->
     <section class="home" id="home">
-        <div class = "home-content">
+        <div class = "homeContent">
             <h3>Hello, I am</h3>
             <h1>Yardleigh Anthony</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis corporis laboriosam, voluptatum itaque reprehenderit. Suscipit nihil et provident sed.</p>
@@ -47,6 +43,6 @@
         </div>
     </section>
     <!--Customer js-->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
