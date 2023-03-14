@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    font-family:  'Montserrat', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/*:root represents the <html> element. Specificity is higher*/
+:root{
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #09008d;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0,0,0,.2);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 1rem 2%;
+    background-color: rgb(192, 191, 191);
+    display: flex;
+    align-items:  center;
+    z-index: 100;
+}
+@media only screen and (max-width:400px){
+    .card{
+        width:90%;
+        height:90%;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .card{
+        width:90%;
+        height:90%;
+    }
+}
+
+.three-col{
+    display: grid;
+    grid-template-columns: 740px 550px 50px;
+    grid-template-rows: 50px;
+}
+.three-col div{
+    border: 1px solid black;
+}
+
+.myLogo{
+    font-size: 2.5rem;
+    color:var(--main-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.naviBar a{
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+.naviBar a.active::before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    width:70px;
+    height: .2rem;
+    background: var(--white-color);
+}
+
