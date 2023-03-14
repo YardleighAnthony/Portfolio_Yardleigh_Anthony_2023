@@ -10,12 +10,18 @@
     outline: none;
     scroll-behavior: smooth;
 }
-
+*,
+*:before,
+*:after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
 /*:root represents the <html> element. Specificity is higher*/
 :root{
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --main-color: #09008d;
+    --main-color: #ff3c78;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0,0,0,.2);
 }
@@ -36,7 +42,7 @@ body{
     left: 0;
     width:100%;
     padding: 1rem 2%;
-    background-color: rgb(192, 191, 191);
+    background-color: black;
     display: flex;
     align-items:  center;
     z-index: 100;
@@ -57,7 +63,7 @@ body{
 
 .three-col{
     display: grid;
-    grid-template-columns: 740px 550px 50px;
+    grid-template-columns: 740px 510px 50px;
     grid-template-rows: 50px;
 }
 .three-col div{
@@ -67,18 +73,43 @@ body{
 .myLogo{
     font-size: 2.5rem;
     color:var(--main-color);
-    font-weight: 600;
+    font-weight: bolder;
     cursor: pointer;
 }
-
+.myLogo:hover{
+    color: #fdfdfd;
+}
+/*.myLogo:hover:after{
+    font: #fdfdfd;
+}*/
 .naviBar a{
     position: relative;
     font-size: 1.7rem;
     color: var(--white-color);
     font-weight: 500;
-    margin-right: 3.5rem;
+    margin-right: 3.4rem;
 }
-.naviBar a.active::before{
+
+a{
+    position:relative;
+    text-decoration: none;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.6s;
+}
+a:hover:after{
+
+    width:100%;
+
+}
+/*.naviBar a.active::before{
     content:'';
     position: absolute;
     left:0;
@@ -86,5 +117,13 @@ body{
     width:70px;
     height: .2rem;
     background: var(--white-color);
+}*/
+#moon-icon{
+    font-size: 2.4rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+#moon-icon:hover{
+    color:  #ff3c78;
 }
 
