@@ -22,7 +22,7 @@
     --bg-color: #fdfdfd;
     --text-color: #333;
     --main-color: #ff3c78;
-    --white-color: #fdfdfd;
+    --white-color: black;
     --shadow-color: rgba(0,0,0,.2);
 }
 
@@ -42,7 +42,7 @@ body{
     left: 0;
     width:100%;
     padding: 1rem 2%;
-    background-color: black;
+    background-color: white;
     display: flex;
     align-items:  center;
     z-index: 100;
@@ -67,7 +67,7 @@ body{
     grid-template-rows: 50px;
 }
 .three-col div{
-    border: 1px solid black;
+    
 }
 
 .myLogo{
@@ -77,7 +77,7 @@ body{
     cursor: pointer;
 }
 .myLogo:hover{
-    color: #fdfdfd;
+    color: black;
 }
 /*.myLogo:hover:after{
     font: #fdfdfd;
@@ -86,7 +86,7 @@ body{
     position: relative;
     font-size: 1.7rem;
     color: var(--white-color);
-    font-weight: 500;
+    font-weight: 900;
     margin-right: 3.4rem;
 }
 
@@ -94,7 +94,7 @@ a{
     position:relative;
     text-decoration: none;
 }
-a:after{
+.naviBar a:after{
     content: "";
     position: absolute;
     background-color: #ff3c78;
@@ -104,20 +104,12 @@ a:after{
     bottom: -10px;
     transition: 0.6s;
 }
-a:hover:after{
+.naviBar a:hover:after{
 
     width:100%;
 
 }
-/*.naviBar a.active::before{
-    content:'';
-    position: absolute;
-    left:0;
-    bottom:-6px;
-    width:70px;
-    height: .2rem;
-    background: var(--white-color);
-}*/
+
 #moon-icon{
     font-size: 2.4rem;
     color: var(--white-color);
@@ -127,3 +119,25 @@ a:hover:after{
     color:  #ff3c78;
 }
 
+section{
+    min-height: 100vh;
+    padding:10rem 7% 2rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+
+}
+.home .home-content{
+    max-width: 45%;
+
+}
+.home .home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: .7;
+}
+.home .home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+}
