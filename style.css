@@ -191,9 +191,14 @@ section{
     font-size: 2rem;
     color: var(--main-color);
     margin: 2.5rem 1.5rem 3rem 0;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    
     transition: .5s ease;
 }
 .homeContent .socialMedia a:hover{
+    background: grey;
+    color: #ff3c78;
 
 }
 .main{
