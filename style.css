@@ -19,16 +19,14 @@
 
 body{
     min-height: 100vh;
-    overflow: hidden;
 }
 
 header{
     position: fixed;
-    top: 0;
+    top: 10px;
     width:100%;
     right:0;
-    padding: 20px 0;
-    border: 1px solid black;
+    padding: 0 0 0 50px;
     display: flex;
     align-items:  center;
     z-index: 1000;
@@ -36,6 +34,7 @@ header{
     background: transparent;
     transition: all .50s ease;
     margin: auto;
+    border: 1px solid black;
 }
 
 @media(max-width:1280px){
@@ -102,7 +101,7 @@ header{
 .naviBar a{
     position: relative;
     font-size: 1rem;
-    color: var(--white-color);
+    color: white;
     font-weight: 600;
     transition: all.50s ease;
     margin-right: 1.4rem;
@@ -110,12 +109,13 @@ header{
 
 .naviBar{
     display: flex;
-    margin-left: 680px;
+    margin-left: 580px;
+    padding:5px 0 0 0;
 }
 .naviBar a:after{
     content: "";
     position: absolute;
-    background-color: #ff3c78;
+    background-color: rgb(120, 197, 233);
     height: 3px;
     width: 0%;
     left: 0;
@@ -130,27 +130,27 @@ header{
     color: #ff3c78;
 }*/
 .naviBar a:active{
-    color: #ff3c78;
+    color: rgb(120, 197, 233);
 }
 
 #moon-icon{
     font-size: 2rem;
-    color: var(--white-color);
+    color: white;
     cursor: pointer;
     margin-left: 10px;
 }
 #moon-icon:hover{
-    color:  #ff3c78;
+    color:  rgb(120, 197, 233) ;
 }
 #menu-icon{
     font-size: 2rem;
-    margin-left: 10px;
-    color: var(--white-color);
+    margin-left: 5px;
+    color: white;;
     cursor: pointer;
     z-index: 10001;
 }
 #menu-icon:hover{
-    color:  #ff3c78;
+    color:  rgb(120, 197, 233);
 }
 
 
@@ -314,10 +314,24 @@ section{
 }
 .my-pic img{
     position: absolute;
-    bottom: 50px;
+    bottom: -10px;
     right:150px;
     width: 50%;
     position: none;
 
+}
+.my-img img{
+   border: 1px solid black;
+   margin-top: 50px;
+}
+section .about-me{
+    display: flex;
+    justify-content: center;
+}
+.about-me{
 
+    position: relative;
+    width:600px;
+    height: 350px;
+    background-color: red;
 }
