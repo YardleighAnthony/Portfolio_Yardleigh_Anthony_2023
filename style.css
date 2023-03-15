@@ -308,8 +308,8 @@ section{
     width: 0;
     height: 0;
     border-top:410px solid rgb(2, 46, 75) ; /*320*/
-    border-right:384px solid rgb(2, 46, 75) ;
-    border-bottom:410px solid rgb(2, 46, 75) ;
+    border-right:384px solid green ;
+    border-bottom:410px solid yellow ;
     border-left:384px solid transparent ;
 }
 .my-pic img{
@@ -329,7 +329,7 @@ section .about-me{
     justify-content: center;
 }
 .about-me{
-
+    margin-top: 71px;
     position: relative;
     width:600px;
     height: 350px;
