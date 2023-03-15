@@ -12,15 +12,14 @@
 :root{
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --main-color: #ff3c78;
+    --main-color: rgb(120, 197, 233);
     --white-color: black;
     --shadow-color: rgba(0,0,0,.2);
 }
 
 body{
-    background: var(--bg-color);
-    color: var(--text-color);
     min-height: 100vh;
+    overflow: hidden;
 }
 
 header{
@@ -29,7 +28,7 @@ header{
     width:100%;
     right:0;
     padding: 28px 4%;
-    background-color: white;
+    border: 1px solid black;
     display: flex;
     align-items:  center;
     z-index: 1000;
@@ -166,7 +165,7 @@ section{
     align-items: center;  
 }
 .home .homeContent{
-    max-width: 45%;
+    max-width: 35%;
 
 }
 .home .homeContent h3{
@@ -178,28 +177,51 @@ section{
     font-size: 2.9rem;
     font-weight: 700;
 }
-.homeContent .socialMedia a{
+.socialMedia{
+    position: relative;
+    display: flex;
+}
+.homeContent .socialMedia li a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 4rem;
     height: 4rem; 
     background: transparent;
-    border: 2px solid black;
     border-radius: 50%;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 2rem;
     color: var(--main-color);
     margin: 2.5rem 1.5rem 3rem 0;
     transform-style: preserve-3d;
-    perspective: 500px;
-    
-    transition: .5s ease;
+    perspective: 500px;   
+    transition: background .5s ease;
 }
-.homeContent .socialMedia a:hover{
-    background: grey;
-    color: #ff3c78;
+/*.homeContent .socialMedia li::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.2rem;
+    transform: translate(-50%) ;
+    margin-right: 100px;
 
+}*/
+.homeContent .socialMedia li a:hover.linkedin{
+    background: rgb(45, 132, 190);
+
+}
+
+.homeContent .socialMedia li a:hover.github {
+    background: rgb(37, 201, 37);
+}
+
+.homeContent .socialMedia li a:hover .fa{
+    transition: 0.25s;
+    pointer-events: none;
+}
+.homeContent .socialMedia li a:hover .fa{
+    color: #fff;
 }
 .main{
     display:flex;
@@ -213,4 +235,40 @@ section{
     font-weight: 500;
     transition: all .50s ease;
 
+}
+.home .skill-container{ 
+    position: absolute;
+    top: 50%;
+    right:0;
+    transform: translateY(-50%);
+    width:768px;
+    height: 768px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.home .skill-container .skill-box{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 690px;
+    height: 640px;
+    background:rgb(2, 49, 68);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+.home .skill-box .skills{
+    position: absolute;
+    left:0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 360px; /*384*/
+    
+}
+.home .skill-box .skills h3{ 
+    color: var(--main-color);
 }
