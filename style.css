@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth ;
     list-style: none;
 }
 /*:root represents the <html> element. Specificity is higher*/
@@ -21,10 +22,11 @@ body{
     min-height: 100vh;
 }
 
-header{
+.header{
     position: fixed;
-    top: 10px;
+    top: 0;
     width:100%;
+    height: 50px;
     right:0;
     padding: 0 0 0 50px;
     display: flex;
@@ -32,12 +34,16 @@ header{
     z-index: 1000;
     /*justify-content: space-between;*/
     background: transparent;
-    transition: all .50s ease;
+    transition: .5s;
     margin: auto;
-    border: 1px solid black;
+}
+.header.sticky{
+     background-color: white;
+     position: fixed;
+     box-shadow: 0 10px 10px -10px rgba(0,0,0, 0.35);
 }
 
-@media(max-width:1280px){
+/*@media(max-width:1280px){
     header{
         padding:14px 2%;
         transition: .2s;
@@ -81,7 +87,7 @@ header{
     .naviBar.open{
         right: 2%;;
     }
-}
+}*/
 .myLogo{
     display: flex;
     align-items: center;
@@ -106,7 +112,20 @@ header{
     transition: all.50s ease;
     margin-right: 1.4rem;
 }
-
+.header.sticky .naviBar a{
+     color: black;
+}
+.header.sticky .naviBar a.active{
+     color: rgb(120, 197, 233);
+}
+.header.sticky .naviBar a::before{
+    background:var(--main-color ) ;
+    opacity:  .7;
+}
+header.header.sticky #moon-icon{
+    color: black;
+    opacity: .9;
+}
 .naviBar{
     display: flex;
     margin-left: 580px;
@@ -115,7 +134,7 @@ header{
 .naviBar a:after{
     content: "";
     position: absolute;
-    background-color: rgb(120, 197, 233);
+    background-color:white;
     height: 3px;
     width: 0%;
     left: 0;
@@ -308,30 +327,136 @@ section{
     width: 0;
     height: 0;
     border-top:410px solid rgb(2, 46, 75) ; /*320*/
-    border-right:384px solid green ;
-    border-bottom:410px solid yellow ;
+    border-right:384px solid rgb(2, 46, 75)  ;
+    border-bottom:410px solid rgb(2, 46, 75)  ;
     border-left:384px solid transparent ;
 }
+
 .my-pic img{
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     right:150px;
     width: 50%;
     position: none;
 
 }
-.my-img img{
-   border: 1px solid black;
+.about-me{
+    margin-top: 72px;
+    height: 400px;
+    transition: .5s;
+}
+.about-me .my-img img{
+    height: 450px;
+    margin-top: -100px;
+
+}
+span{
+    color:rgb(2, 46, 75)  ;
+
+}
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
+}
+.my-content h2{
+    text-align: left;
+    line-height: 1.2;
+
+}
+.my-content{
+    margin-left: 20px ;
+}
+.my-content h3{
+    font-size: 2rem;
+}
+.about-me p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+/*.my-img img{
    margin-top: 50px;
 }
 section .about-me{
     display: flex;
     justify-content: center;
 }
-.about-me{
-    margin-top: 71px;
-    position: relative;
-    width:600px;
-    height: 350px;
-    background-color: red;
+:root .about-me{
+    width: 598px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin-top: 72px;
+    margin-left: 389px;
 }
+.about-me div{
+    margin-top: 200px;
+    position: relative;
+    width:100px;
+    height: 300px;
+    /*background-color: grey;
+    margin-left: 390px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+.about-me .my-circle{
+    position: absolute;
+    top: 700px;
+    bottom: 200px;
+    left: 0;
+    width:44%;
+    height: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.about-me .my-circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: green;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+
+}
+.about-me .my-circle:hover::before{
+    background: rgb(251, 255, 0);
+    clip-path: circle(400px at center);
+}
+.about-me img{
+    top:167%;
+    position: absolute;
+    left:50%;
+    height: 40%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+.about-me:hover img{
+    left:60%;
+    height: 500px;
+}
+.about-me .my-circle .content{
+    border: 1px solid black;
+    width: 80%;
+    position: relative;
+
+}
+.about-me h1{
+    width: 100px;
+}*/
+
+
+
+
