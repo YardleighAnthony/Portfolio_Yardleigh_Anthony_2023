@@ -123,7 +123,7 @@ body{
     color: white;
     font-weight: 600;
     transition: all.50s ease;
-    margin-right: 1.4rem;
+    margin-right: 1.2rem;
 }
 .header.sticky .naviBar a{
      color: black;
@@ -392,83 +392,6 @@ span{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-/*.my-img img{
-   margin-top: 50px;
-}
-section .about-me{
-    display: flex;
-    justify-content: center;
-}
-:root .about-me{
-    width: 598px;
-    height: 100px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    transition: 0.5s;
-    margin-top: 72px;
-    margin-left: 389px;
-}
-.about-me div{
-    margin-top: 200px;
-    position: relative;
-    width:100px;
-    height: 300px;
-    /*background-color: grey;
-    margin-left: 390px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    transition: .5s;
-}
-.about-me .my-circle{
-    position: absolute;
-    top: 700px;
-    bottom: 200px;
-    left: 0;
-    width:44%;
-    height: 50%;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.about-me .my-circle::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height: 100%;
-    background: green;
-    clip-path: circle(120px at center);
-    transition: 0.5s;
-
-}
-.about-me .my-circle:hover::before{
-    background: rgb(251, 255, 0);
-    clip-path: circle(400px at center);
-}
-.about-me img{
-    top:167%;
-    position: absolute;
-    left:50%;
-    height: 40%;
-    transform: translate(-50%,-50%);
-    pointer-events: none;
-    transition: .5s;
-}
-.about-me:hover img{
-    left:60%;
-    height: 500px;
-}
-.about-me .my-circle .content{
-    border: 1px solid black;
-    width: 80%;
-    position: relative;
-
-}
-.about-me h1{
-    width: 100px;
-}*/
 
 .experience .experience-container{
     display: flex;
@@ -483,6 +406,7 @@ section .about-me{
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
+    transition: .5s ease;
 }
 .experience-container1 .experience-box{
     flex: 1 1 10rem;
@@ -492,6 +416,28 @@ section .about-me{
     border-radius: 2rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
     margin-left: 420px;
+    transition: .5s ease;
+}
+/*Qualifications*/
+.experience .experience-container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.experience-container2 .experience-box{
+    flex: 1 10rem;
+    background-color: white;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    transition: .5s ease;
+}
+
+.experience-box i{
+    font-size: 2.5rem;
 }
 .experience-box .csharp-img img{
     display: flex;
@@ -585,51 +531,6 @@ section .about-me{
     width: 150px;
 }
 
-.section-subtitle{
-    text-align: center;
-}
-.qualification{
-    position: relative ;
-}
-.qualification-container{
-    row-gap:3.5rem ;
-    border:1px solid black;
-
-}
-.qualification-title{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: .5rem;
-    font-size: small;
-    font-weight: bolder;
-    margin-bottom: 2rem;
-}
-.qualification-title i{
-     font-size: 1rem;
-     font-weight: initial;
-
-}
-.qualification-info{
-    display: grid;
-    row-gap:2rem;
-}
-.qualification-name{
-    font-size: medium;
-    margin-bottom: 1.25rem;
-}
-.qualification-country, .qualification-year{
-    display: block;
-    font-size: small;
-    font-weight: bold;
-    color: grey;
-}
-.qualification-country{
-    margin-bottom: .75rem;
-}
-.qualification-info{
-    border:1px solid black;
-}
 
 
 
