@@ -376,6 +376,7 @@ span{
 .heading{
     font-size: 4.5rem;
     text-align: center;
+    margin-top: -50px;;
 }
 .my-content h2{
     text-align: left;
@@ -529,6 +530,44 @@ span{
 }
 .experience-box .excel-box{
     width: 150px;
+}
+.btn{
+    background:rgb(120, 197, 233);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    padding: .5rem;
+    cursor: pointer;
+}
+.contact h2{
+    margin-bottom: 1rem;
+    margin-top: -100px;
+}
+.contact form{
+    max-width: 40rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+     
+}
+.contact form .input-box{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding:1rem;
+    font-size: 1.2rem;
+    background: rgb(255, 255, 255);
+    border-radius: .8rem;
+    margin: .7rem 0;
+    box-shadow: 0 .1rem .5rem rgb(190, 190, 190) ;
+    border: none;
 }
 
 
