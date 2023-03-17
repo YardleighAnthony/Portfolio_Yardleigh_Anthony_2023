@@ -49,6 +49,7 @@ body{
     background: transparent;
     transition: .5s;
     margin: auto;
+    background: rgb(2, 46, 75);
 }
 .header.sticky{
      background-color: white;
@@ -128,9 +129,6 @@ body{
 .header.sticky .naviBar a{
      color: black;
 }
-.header.sticky .naviBar a.active{
-     color: rgb(120, 197, 233);
-}
 .header.sticky .naviBar a::before{
     background:var(--main-color ) ;
     opacity:  .7;
@@ -138,6 +136,35 @@ body{
 header.header.sticky #moon-icon{
     color: black;
     opacity: .9;
+}
+header.header.sticky #menu-icon{
+    color: black;
+    opacity: .9;
+}
+header.header.sticky #moon-icon:hover{
+    color:  rgb(120, 197, 233);
+    opacity: .9;
+}
+header.header.sticky #menu-icon:hover{
+    color:  rgb(120, 197, 233);
+    opacity: .9;
+}
+@keyframes professionRotate{
+    0%,20%{
+        transform: rotate(0deg);
+    }
+    25%,45%{
+        transform: rotate(-90deg);
+    }
+    50%,70%{
+        transform: rotate(-180deg);
+    }
+    75%,95%{
+        transform: rotate(-270deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
 }
 .naviBar{
     display: flex;
@@ -165,21 +192,13 @@ header.header.sticky #moon-icon{
     color: rgb(120, 197, 233);
 }
 
-#moon-icon{
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin-left: 10px;
-}
-#moon-icon:hover{
-    color:  rgb(120, 197, 233) ;
-}
 #menu-icon{
     font-size: 2rem;
     margin-left: 5px;
     color: white;;
     cursor: pointer;
     z-index: 10001;
+    display:none;
 }
 #menu-icon:hover{
     color:  rgb(120, 197, 233);
@@ -287,6 +306,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: professionRotate 13s ease-in-out infinite;
 
 } 
 .home .skill-box .skills{
@@ -346,11 +366,14 @@ section{
 }
 
 .my-pic img{
+    display: flex;
     position: absolute;
     bottom: -20px;
     right:150px;
     width: 50%;
     position: none;
+    width: 360px;
+    margin-right: 150px ;
 
 }
 .about-me{
@@ -532,18 +555,30 @@ span{
     width: 150px;
 }
 .btn{
+    display: inline-block;
+    letter-spacing: .1rem;
+    padding: 1rem .4rem;
     background:rgb(120, 197, 233);
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    border-radius: 7px;
-    border: none;
-    padding: .5rem;
+    border-radius: 20px;
+    border: .2rem solid transparent;
     cursor: pointer;
+    transition: .5s ease;
+    color: white;
+}
+.btn:hover{
+    background: transparent;
+    box-shadow: 0 .1rem .5rem rgb(190, 190, 190);
+    transition: .5s ease;
+    border-color:rgb(2, 46, 75);
+    color: black;
 }
 .contact h2{
     margin-bottom: 1rem;
     margin-top: -100px;
+    font-size: 3rem;
 }
 .contact form{
     max-width: 40rem;
@@ -561,7 +596,7 @@ span{
 .contact form .input-box input,
 .contact form textarea{
     width: 100%;
-    padding:1rem;
+    padding:.8rem;
     font-size: 1.2rem;
     background: rgb(255, 255, 255);
     border-radius: .8rem;
@@ -569,8 +604,47 @@ span{
     box-shadow: 0 .1rem .5rem rgb(190, 190, 190) ;
     border: none;
 }
+.contact form .input-box input{
+    width: 49%;
+}
 
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
 
+}
+.footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5 rem 7%;
+    background: rgb(2, 46, 75);
+}
+.footer-text p{
+    font-size: 1.2rem;
+    color: white;
+}
+.footer-icon-top a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    background: white;
+    border-radius: .8rem;
+    border: .2rem solid rgb(2, 46, 75);
+    outline: .2rem solid transparent;
+    transition: .5s ease;
+}
+.footer-icon-top a:hover{
+    outline-color: white;
+}
+.footer-icon-top a i{
+    font-size: 2rem;
+    color: rgb(2, 46, 75);
+
+}
 
 
 

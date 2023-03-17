@@ -19,18 +19,15 @@
 
     <!--Header design-->
     <header class = "header">
-            <a href="#" class = "myLogo">Portfolio</a>
-            <ul class="naviBar">
-                <li><a href="#home" class = "active" >Home</a></li>
-                <li><a href="#about-me">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#qualification">Qualification</a></li>
-                <li><a href="#contact-Me">Contact me</a></li>
-            </ul>
-            <div class="main">  
-                <div class = "bx bx-moon" id = "moon-icon"></div>
-                <div class='bx bx-menu' id = "menu-icon"></div> 
-            </div>
+            <a href="#home" class = "myLogo">Portfolio</a>
+            <nav class="naviBar">
+                <a href="#home" class = "active" >Home</a>
+                <a href="#about-me">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#qualification">Qualification</a>
+                <a href="#contact-Me">Contact me</a>
+            </nav>
+            <div class='bx bx-menu' id = "menu-icon"></div> 
                         
     </header>
 
@@ -39,20 +36,20 @@
         <div class = "homeContent">
             <h3>Hello, I am</h3>
             <h1>Yardleigh Anthony</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis corporis laboriosam, voluptatum itaque reprehenderit. Suscipit nihil et provident sed.</p>
+            <p>I am a currently in my third year of studies completing my Bachelor Degree as a Business Intelligence student</p>
             <div class="socialMedia">
                 <li data-text="GitHub">
-                    <a href="#" class = "github"><i class='bx bxl-github fa'></i></a>
+                    <a href="https://github.com/YardleighAnthony/Portfolio_Yardleigh_Anthony_2023.git" target = "_blank" class = "github"><i class='bx bxl-github fa'></i></a>
                 </li>
                 <li data-text="LinkedIn">
-                    <a href="#" class = "linkedin" data-text = "LinkedIn"><i class='bx bxl-linkedin fa'></i></a>   
+                    <a href="https://www.linkedin.com/in/yardleigh-anthony-68a235262/" target = "_blank" class = "linkedin" data-text = "LinkedIn"><i class='bx bxl-linkedin fa'></i></a>   
                 </li>
 
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="/Images/CV.png " class="btn fa" download >Download CV</a>
         </div>
 
-        <div class="skill-container">
+        <!--<div class="skill-container">
             <div class="skill-box">
                 <div class="skills" style = "--i:0;">
                     <i class='bx bx-code-alt'></i>
@@ -72,7 +69,7 @@
                 </div>
 
                 <div class="my-circle"></div>
-            </div>
+            </div>-->
             <div class="move"></div>
 
             <div class="my-pic">
@@ -219,20 +216,31 @@
     <section class="contact" id="contact-Me">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form action="https://formsubmit.co/7979cab5250b04a9fd563b2fe5e4c2f4 " method = "POST">
             <div class = "input-box"> 
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Full Name" name="Fname" required>
+                <input type="email" placeholder="Email Address" required>
             </div>
             <div class = "input-box"> 
                 <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="text" name="Email" placeholder="Email Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value ="Send Message" class = "btn"> 
-
+            <textarea name ="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value ="Send Message" class = "btn fa form-submit-button"> 
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#home">
+            <input type="hidden" name="_subject" value="New email!">
         </form>
     </section>
+
+    <footer class = "footer">
+        <div class = "footer-text">
+            <p>Copyright &copy; 2023 by Codehal | All Rights Reserved</p>
+        </div>
+        
+        <div class="footer-icon-top">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
     <!--Customer js-->
     <script src="script.js"></script>
 </body>
